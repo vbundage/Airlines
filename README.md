@@ -1,5 +1,4 @@
 ## Airlines
----
 Airlines is an application created using React to display airline routes using sample data.
 
 The list of routes can be updated using the dropdowns and will

@@ -50,6 +50,10 @@ select {
   margin: 0 .5em;
 }
 
+.pagination button {
+  margin: 0 .5em;
+}
+
 svg circle:hover {
   cursor: crosshair;
 }

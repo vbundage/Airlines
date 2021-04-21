@@ -8,4 +8,4 @@ Numbers listed next to airports and airlines in the dropdowns indicate the amoun
 
 The map component displays connected routes by airport location.
 
-[See live demo](https://dashboard.heroku.com/apps/thawing-fortress-33689/activity/builds/c6cf9b7b-2f2f-498b-b837-a72e42495bd6).
+[See live demo](https://thawing-fortress-33689.herokuapp.com/).

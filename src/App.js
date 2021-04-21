@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Table from './components/Table';
 import Select from './components/Select';
 import Map from './components/Map';
-import { getAirlineById, getAirportByCode } from './data';
+import { getAirlineById, getAirportByCode, getRouteCountByCode, getRouteCountById } from './data';
 import data from './data';
 
 const { routes, airlines, airports } = data;
@@ -66,10 +66,10 @@ const App = () => {
     if (filteredRoutes.find(route => route.airline === airline.id)) {
       airline = {
         ...airline,
-        active: true
+        active: true,
       };
     }
-    return Object.assign({}, airline);
+    return Object.assign({}, airline, { count: getRouteCountById(airline.id) });
   });
 
   const filteredAirports = airports.map(airport => {
@@ -77,10 +77,10 @@ const App = () => {
       route.src === airport.code || route.dest === airport.code)) {
       airport = {
         ...airport,
-        active: true
+        active: true,
       };
     }
-    return Object.assign({}, airport);
+    return Object.assign({}, airport, { count: getRouteCountByCode(airport.code) });
   });
 
   return (

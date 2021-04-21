@@ -1403,4 +1403,13 @@ export const getAirportByCode = code => {
   return airports.find(airport => airport.code === code);
 };
 
+export const getRouteCountById = id => {
+  return routes.filter(route => route.airline === id).length;
+};
+
+export const getRouteCountByCode = code => {
+  return routes.filter(route =>
+    route.src === code || route.dest === code).length
+};
+
 export default { routes, airlines, airports };

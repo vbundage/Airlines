@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Select = ({ options, valueKey, titleKey, allTitle, value, onSelect }) => {
+  options.sort((optionA, optionB) => optionA.name > optionB.name);
   return (
     <select onChange={onSelect} value={value}>
       <option value='all'>{allTitle}</option>
@@ -11,7 +12,7 @@ const Select = ({ options, valueKey, titleKey, allTitle, value, onSelect }) => {
             value={obj[valueKey]}
             disabled={!obj['active']}
           >
-            {obj[titleKey]}
+            {obj[titleKey]} ({obj.count})
           </option>
         )
       })}
